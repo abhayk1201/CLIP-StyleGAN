@@ -1,0 +1,30 @@
+defaults:
+  - img: flower
+  - optim: adam
+  - model: unet
+  - task: inpainting
+  - hydra # hydra stuff
+  - override hydra/launcher: basic_launcher
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+
+exp_name: dip
+seed: 0
+device: cuda # cpu or cuda
+
+train:
+  num_steps: 10000
+  log_steps: 100
+  save_weights: True
+
+loss:
+  forward: 1
+  feature: 0
+  clip: 1e-2
+
+wandb:
+  use: True
+  entity: clip-recovery
+  project: dip_${task.name}
+  api_key: ${hydra:runtime.cwd}/wandb_api.key
+  name: ${exp_name}_${img.name}

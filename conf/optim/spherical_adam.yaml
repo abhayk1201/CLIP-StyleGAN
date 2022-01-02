@@ -1,0 +1,6 @@
+# @package optim
+name: adam
+lr: 0.4
+schedule: linear1cycle
+num_steps: ${train.num_steps}
+use_spherical: True

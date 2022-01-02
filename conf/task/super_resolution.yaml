@@ -1,0 +1,4 @@
+name: super_resolution
+factor: 64
+downsample_func: BicubicDownSample
+metric: F.l1_loss

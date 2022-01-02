@@ -1,0 +1,5 @@
+# @package optim
+name: adam
+lr: 3e-4
+schedule: linear1cycle
+num_steps: ${train.num_steps}

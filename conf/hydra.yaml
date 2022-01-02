@@ -1,0 +1,22 @@
+# Hydra configs
+hydra:
+  run:
+    dir: ./outputs/${exp_name}/${task.name}/${img.name}/${hydra.job.override_dirname}
+  sweep:
+    dir: ./outputs/${exp_name}/${task.name}/${img.name}/
+    subdir: ${hydra.job.override_dirname}
+  job_logging:
+    root:
+      handlers:
+        - file
+  job:
+    config:
+      override_dirname:
+        exclude_keys:
+          - exp_name
+          - img.name
+          - img
+          - task
+          - task.name
+          - wandb.name
+          - wandb.project

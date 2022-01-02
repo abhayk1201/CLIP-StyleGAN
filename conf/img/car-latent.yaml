@@ -1,0 +1,7 @@
+# @package img
+index: 21
+name: stanford-car_${img.index}
+height: 512
+width: 512
+path: ${hydra:runtime.cwd}/data/cars/latents/latent-${img.index}.pt
+caption: This is a white BMW sedan. It is front facing, with number plate visible.

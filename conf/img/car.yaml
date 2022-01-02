@@ -1,0 +1,7 @@
+# @package img
+index: 21
+name: stanford-car_${img.index}
+height: 512
+width: 512
+path: ${hydra:runtime.cwd}/data/cars/inversions/${img.index}.jpg
+caption: This is a white fancy car with

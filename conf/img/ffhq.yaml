@@ -1,0 +1,7 @@
+# @package img
+index: 00001
+name: ffhq_${img.index}
+latent_path: ${hydra:runtime.cwd}/data/ffhq/latent-${img.index}.pt
+height: ${stylegan.size}
+width: ${stylegan.size}
+caption_path: ${hydra:runtime.cwd}/data/ffhq/caption-${img.index}.txt

@@ -1,0 +1,7 @@
+# @package img
+index: 21
+name: lsun-church_${img.index}
+height: 256
+width: 256
+path: ${hydra:runtime.cwd}/data/church/latents/latent-${img.index}.pt
+caption: This church is a white edifice with a tall tower.

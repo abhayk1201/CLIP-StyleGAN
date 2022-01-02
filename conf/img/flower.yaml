@@ -1,0 +1,10 @@
+# @package img
+name: flower_foveon
+bits: 8
+path: ${hydra:runtime.cwd}/data/rgb-jpeg/${img.name}.jpg
+height: 128
+width: 128
+plot: False
+crop_mode: "resize-crop"
+save_gt: False
+caption: A hibiscus flower with a yellow center and detailled petals

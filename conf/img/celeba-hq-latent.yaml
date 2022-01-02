@@ -1,0 +1,11 @@
+# @package img
+index: 1
+name: celeba-hq_${img.index}
+height: 1024
+width: 1024
+# Uses GAN inversion latents
+path: ${hydra:runtime.cwd}/data/celeba-hq/latents/latent-${img.index}.pt
+plot: True
+caption:
+  path: ${hydra:runtime.cwd}/data/celeba-hq/caption/${img.index}.txt
+  lines: 2

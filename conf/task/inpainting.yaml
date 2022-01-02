@@ -1,0 +1,5 @@
+name: inpainting
+mask:
+  path: inpainting_mask_seed_${seed}_size_${img.width}.npy
+  generation: manual # or random, will call utils.random_mask.generate_spiky_mask
+  kwargs: {} # supplied to utils.random_mask.generate_spiky_mask

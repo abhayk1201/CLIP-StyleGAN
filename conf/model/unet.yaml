@@ -1,0 +1,9 @@
+name: unet
+kwargs:
+  num_input_channels: 3
+  num_output_channels: 3
+  feature_scale: 4
+  more_layers: 0
+  concat_x: False
+  upsample_mode: "deconv"
+  pad: "zero"

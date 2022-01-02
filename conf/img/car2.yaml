@@ -1,0 +1,10 @@
+# @package img
+name: car2
+bits: 8
+path: ${hydra:runtime.cwd}/data/rgb-jpeg/${img.name}.jpeg
+height: 128
+width: 128
+plot: False
+crop_mode: "resize-crop"
+save_gt: False
+caption: A car on a highway

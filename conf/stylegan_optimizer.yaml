@@ -1,0 +1,37 @@
+defaults:
+  - img: mean_latent
+  - optim: spherical_adam
+  - task: super_resolution
+  - hydra # hydra stuff
+  - override hydra/launcher: basic_launcher
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+
+exp_name: stylegan_${stylegan.dataset}
+seed: null
+device: cuda # cpu or cuda
+
+train:
+  num_steps: 1000
+  log_steps: 50
+  save_weights: True
+
+stylegan:
+  size: 1024
+  dataset: ffhq
+  ckpt: ${hydra:runtime.cwd}/outputs/ckpt/stylegan2-${stylegan.dataset}-config-f.pt
+  noise_type: trainable # or zero or fixed
+  num_trainable_noise_layers: 5
+  bad_noise_layers: [17]
+
+loss:
+  forward: 10
+  clip: 1
+  geocross: 0.05
+
+wandb:
+  use: True
+  entity: clip-recovery
+  project: stylegan_${stylegan.dataset}_${task.name}
+  api_key: ${hydra:runtime.cwd}/wandb_api.key
+  name: ${exp_name}_${img.name}

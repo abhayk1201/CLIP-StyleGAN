@@ -1,0 +1,7 @@
+# @package img
+name: mean_latent
+caption: This is a man with black eyes, thin eyebrows and Asian origin
+path: mean_latent
+height: ${stylegan.size}
+width: ${stylegan.size}
+#caption: This is an Indian woman with blue eyes and red lips

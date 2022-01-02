@@ -1,0 +1,3 @@
+name: lensless
+psf_path: ${hydra:runtime.cwd}/data/psf.npy
+metric: F.mse_loss

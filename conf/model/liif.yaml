@@ -1,0 +1,6 @@
+name: liif
+kwargs:
+  imnet_spec: ""
+  local_ensemble: True
+  feat_unfold: True
+  cell_decode: True
