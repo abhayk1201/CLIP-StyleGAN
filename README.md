@@ -1,5 +1,7 @@
 # README
 
+Refer to the attached [`project report`](https://github.com/abhayk1201/CLIP-StyleGAN/blob/master/Project_Report.pdf) 
+
 Authors: Varun Sundar, Abhay Kumar, Kalyani Unnikrishnan and Kriti Goyal.
 
 ## Install
